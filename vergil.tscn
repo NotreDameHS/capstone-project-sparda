@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bw8b5je6rr1yc"]
 
 [ext_resource type="Texture2D" uid="uid://dsqb0l3x1ya3k" path="res://vergil-devil-may-cry-v0-i5cldcswcxs51.gif-Photoroom.png" id="1_rje3j"]
+[ext_resource type="Script" uid="uid://dpgvna4rykwpu" path="res://player.gd" id="2_j8seg"]
 [ext_resource type="Texture2D" uid="uid://dxsjmuq0qhjnl" path="res://Vergil Animations-Photoroom.png" id="2_yyltm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j8seg"]
@@ -90,6 +91,7 @@ animations = [{
 position = Vector2(258.5, 251.5)
 scale = Vector2(0.8203125, 0.8341794)
 texture = ExtResource("1_rje3j")
+script = ExtResource("2_j8seg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1882233826]
 texture_filter = 1
@@ -97,6 +99,6 @@ position = Vector2(241.98096, 11.388437)
 scale = Vector2(2.6, 2.6)
 sprite_frames = SubResource("SpriteFrames_idrw2")
 animation = &"walking_left"
-frame_progress = 0.96732473
+frame_progress = 0.11906277
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1780415754]
