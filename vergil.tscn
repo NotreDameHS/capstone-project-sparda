@@ -1,15 +1,102 @@
 [gd_scene format=3 uid="uid://bw8b5je6rr1yc"]
 
 [ext_resource type="Texture2D" uid="uid://dsqb0l3x1ya3k" path="res://vergil-devil-may-cry-v0-i5cldcswcxs51.gif-Photoroom.png" id="1_rje3j"]
+[ext_resource type="Texture2D" uid="uid://dxsjmuq0qhjnl" path="res://Vergil Animations-Photoroom.png" id="2_yyltm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8seg"]
+atlas = ExtResource("2_yyltm")
+region = Rect2(0, 412, 204, 206)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q51dn"]
+atlas = ExtResource("2_yyltm")
+region = Rect2(204, 412, 204, 206)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugd28"]
+atlas = ExtResource("2_yyltm")
+region = Rect2(408, 412, 204, 206)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fp7h"]
+atlas = ExtResource("2_yyltm")
+region = Rect2(612, 412, 204, 206)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3vos"]
+atlas = ExtResource("2_yyltm")
+region = Rect2(816, 412, 204, 206)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35uew"]
+atlas = ExtResource("2_yyltm")
+region = Rect2(0, 0, 204, 206)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjtym"]
+atlas = ExtResource("2_yyltm")
+region = Rect2(204, 0, 204, 206)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rwrk0"]
+atlas = ExtResource("2_yyltm")
+region = Rect2(408, 0, 204, 206)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7j0s"]
+atlas = ExtResource("2_yyltm")
+region = Rect2(612, 0, 204, 206)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7liiy"]
+atlas = ExtResource("2_yyltm")
+region = Rect2(816, 0, 204, 206)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_idrw2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8seg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q51dn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugd28")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fp7h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3vos")
+}],
+"loop": true,
+"name": &"sprinting_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35uew")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjtym")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rwrk0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7j0s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7liiy")
+}],
+"loop": true,
+"name": &"walking_left",
+"speed": 5.0
+}]
 
 [node name="Vergil" type="Sprite2D" unique_id=1594864294]
-position = Vector2(255, 252.25)
-scale = Vector2(0.809375, 0.83164126)
+position = Vector2(258.5, 251.5)
+scale = Vector2(0.8203125, 0.8341794)
 texture = ExtResource("1_rje3j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1882233826]
+texture_filter = 1
+position = Vector2(241.98096, 11.388437)
+scale = Vector2(2.6, 2.6)
 sprite_frames = SubResource("SpriteFrames_idrw2")
+animation = &"walking_left"
+frame_progress = 0.96732473
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1780415754]
