@@ -1,3 +1,15 @@
 [gd_scene format=3 uid="uid://bw8b5je6rr1yc"]
 
+[ext_resource type="Texture2D" uid="uid://dsqb0l3x1ya3k" path="res://vergil-devil-may-cry-v0-i5cldcswcxs51.gif-Photoroom.png" id="1_rje3j"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_idrw2"]
+
 [node name="Vergil" type="Sprite2D" unique_id=1594864294]
+position = Vector2(255, 252.25)
+scale = Vector2(0.809375, 0.83164126)
+texture = ExtResource("1_rje3j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1882233826]
+sprite_frames = SubResource("SpriteFrames_idrw2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1780415754]
