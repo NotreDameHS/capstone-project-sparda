@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c7xnu7msdmrog"]
+
+[node name="Base Mob" type="Area2D" unique_id=863104977]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=199474077]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1372215412]
+
+[node name="Control" type="Control" parent="." unique_id=1758989196]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HP" type="ProgressBar" parent="Control" unique_id=1444089368]
+layout_mode = 0
+offset_right = 4.0
+offset_bottom = 27.0
