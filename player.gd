@@ -1,9 +1,8 @@
-extends Sprite2D
+extends CharacterBody2D
 
 var default_speed = 100.0
 var current_speed = 100.0
 var sprint_speed = 200.0
-var velocity = Vector2(0, 0)
 
 
 # Called when the node enters the scene tree for the first time.
@@ -25,14 +24,11 @@ func _process(delta: float) -> void:
 	
 	if Input.is_action_pressed("sprint"):
 		current_speed = sprint_speed
+		$AnimatedSprite2D.play("sprinting")
 	else:
 		current_speed = default_speed
 		
 	
-	if direction.x < 0:
-		flip_h = true
-	elif direction.x > 0:
-		flip_h = false
 		
 		
 		
