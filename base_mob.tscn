@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://c7xnu7msdmrog"]
 
+[ext_resource type="Script" uid="uid://b85bhk5h2nmmf" path="res://base_mob.gd" id="1_2b0xs"]
+
 [node name="Base Mob" type="Area2D" unique_id=863104977]
+script = ExtResource("1_2b0xs")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=199474077]
 
@@ -13,6 +16,9 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="HP" type="ProgressBar" parent="Control" unique_id=1444089368]
+modulate = Color(0, 0.7934291, 0, 1)
 layout_mode = 0
-offset_right = 4.0
-offset_bottom = 27.0
+offset_right = 73.0
+offset_bottom = 6.0
+value = 100.0
+show_percentage = false
