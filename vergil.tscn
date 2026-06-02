@@ -171,16 +171,47 @@ animations = [{
 radius = 60.0
 height = 120.0
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=2091233494]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j8seg"]
+bg_color = Color(0.01955414, 0.019554144, 0.019554114, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q51dn"]
+bg_color = Color(0.5568628, 0.94509804, 0.30980393, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Player" type="CharacterBody2D" unique_id=2091233494]
 script = ExtResource("2_j8seg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=156441353]
-position = Vector2(134.32668, 57.499992)
+position = Vector2(-9.000001, -7)
 scale = Vector2(0.6928755, 0.645631)
 sprite_frames = SubResource("SpriteFrames_xjtym")
 animation = &"sprinting"
 frame_progress = 0.2435848
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2083790660]
-position = Vector2(146, 70)
+position = Vector2(4, 7)
 shape = SubResource("CapsuleShape2D_j8seg")
+
+[node name="Health" type="Control" parent="." unique_id=1397060205]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ProgressBar" type="ProgressBar" parent="Health" unique_id=1700482569]
+layout_mode = 0
+offset_left = -49.0
+offset_top = -72.0
+offset_right = 61.0
+offset_bottom = -60.0
+theme_override_styles/background = SubResource("StyleBoxFlat_j8seg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_q51dn")
+value = 40.0
+show_percentage = false

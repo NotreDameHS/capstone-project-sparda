@@ -3,11 +3,13 @@ extends CharacterBody2D
 var default_speed = 100.0
 var current_speed = 100.0
 var sprint_speed = 200.0
+var health := 100.0
+@onready var health_bar := $Health/ProgressBar
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	set_health(100)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -29,6 +31,9 @@ func _process(delta: float) -> void:
 		current_speed = default_speed
 		$AnimatedSprite2D.play("walking")
 	
+func set_health(new_health: int) -> void:
+	health = new_health
+	health_bar.value = health
 		
 		
 		
