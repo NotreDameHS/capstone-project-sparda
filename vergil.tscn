@@ -167,6 +167,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j8seg"]
+radius = 60.0
+height = 120.0
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=2091233494]
 script = ExtResource("2_j8seg")
 
@@ -178,3 +182,5 @@ animation = &"sprinting"
 frame_progress = 0.2435848
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2083790660]
+position = Vector2(146, 70)
+shape = SubResource("CapsuleShape2D_j8seg")

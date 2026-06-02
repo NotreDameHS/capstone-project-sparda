@@ -27,7 +27,7 @@ func _process(delta: float) -> void:
 		$AnimatedSprite2D.play("sprinting")
 	else:
 		current_speed = default_speed
-		
+		$AnimatedSprite2D.play("walking")
 	
 		
 		
