@@ -9,7 +9,7 @@ func damage(amount: float) -> void:
 			queue_free() 
 		HP.value = health
 
-# Called when the node enters the scene tree for the first time.
+# Called when  the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
 
