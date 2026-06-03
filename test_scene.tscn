@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ccgmx8dcgeh31"]
+
+[ext_resource type="PackedScene" uid="uid://c1twr2i6iwxt8" path="res://devil.tscn" id="1_ia1lp"]
+[ext_resource type="PackedScene" uid="uid://bw8b5je6rr1yc" path="res://vergil.tscn" id="2_sasra"]
+
+[node name="Test Scene" type="Node2D" unique_id=1948280455]
+
+[node name="Devil" parent="." unique_id=341720140 instance=ExtResource("1_ia1lp")]
+position = Vector2(722, 291)
+
+[node name="Player" parent="." unique_id=2091233494 instance=ExtResource("2_sasra")]
+position = Vector2(294, 315)
