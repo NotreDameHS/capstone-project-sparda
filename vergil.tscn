@@ -192,8 +192,8 @@ script = ExtResource("2_j8seg")
 position = Vector2(-9.000001, -7)
 scale = Vector2(0.6928755, 0.645631)
 sprite_frames = SubResource("SpriteFrames_xjtym")
-animation = &"sprinting"
-frame_progress = 0.2435848
+animation = &"new_animation"
+frame_progress = 0.7512954
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2083790660]
 position = Vector2(4, 7)

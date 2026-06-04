@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c1twr2i6iwxt8" path="res://devil.tscn" id="1_ia1lp"]
 [ext_resource type="PackedScene" uid="uid://bw8b5je6rr1yc" path="res://vergil.tscn" id="2_sasra"]
+[ext_resource type="PackedScene" uid="uid://cb8m45kcmgv36" path="res://sword.tscn" id="3_sasra"]
 
 [node name="Test Scene" type="Node2D" unique_id=1948280455]
 
@@ -10,3 +11,6 @@ position = Vector2(722, 291)
 
 [node name="Player" parent="." unique_id=2091233494 instance=ExtResource("2_sasra")]
 position = Vector2(294, 315)
+
+[node name="Sword" parent="." unique_id=726211451 instance=ExtResource("3_sasra")]
+position = Vector2(102.00001, 320)
