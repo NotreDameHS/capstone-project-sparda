@@ -7,6 +7,15 @@ var health := 100.0
 func _ready() -> void:
 	set_health(80)
 
+func take_damage(amount) -> void:
+	health -= amount
+	set_health(health)
+	
+	if health <= 0:
+		die()
+		
+func die():
+	queue_free()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

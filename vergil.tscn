@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dpgvna4rykwpu" path="res://player.gd" id="2_j8seg"]
 [ext_resource type="Texture2D" uid="uid://dxsjmuq0qhjnl" path="res://Vergil Animations-Photoroom.png" id="3_j8seg"]
 [ext_resource type="Texture2D" uid="uid://dn43fplff6uyy" path="res://Idle-Photoroom.png" id="3_q51dn"]
+[ext_resource type="PackedScene" uid="uid://cb8m45kcmgv36" path="res://sword.tscn" id="4_q51dn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j8seg"]
 atlas = ExtResource("3_j8seg")
@@ -198,6 +199,11 @@ frame_progress = 0.7512954
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2083790660]
 position = Vector2(4, 7)
 shape = SubResource("CapsuleShape2D_j8seg")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=718012930]
+position = Vector2(-206, 0)
+
+[node name="Sword" parent="Marker2D" unique_id=726211451 instance=ExtResource("4_q51dn")]
 
 [node name="Health" type="Control" parent="." unique_id=1397060205]
 layout_mode = 3

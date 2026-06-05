@@ -3,10 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://wu1w6pwfrrag" path="res://Upgraded Sword Animations-Photoroom.png" id="1_74bdg"]
 [ext_resource type="Script" uid="uid://dltlmf1ib4ef2" path="res://sword.gd" id="1_e4ynd"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e4ynd"]
-atlas = ExtResource("1_74bdg")
-region = Rect2(408, 0, 204, 361)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_r76a6"]
 atlas = ExtResource("1_74bdg")
 region = Rect2(612, 0, 204, 361)
@@ -15,19 +11,23 @@ region = Rect2(612, 0, 204, 361)
 atlas = ExtResource("1_74bdg")
 region = Rect2(816, 0, 204, 361)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_e4ynd"]
+atlas = ExtResource("1_74bdg")
+region = Rect2(408, 0, 204, 361)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_rx5id"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e4ynd")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_r76a6")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dwvek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e4ynd")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack",
 "speed": 5.0
 }]
@@ -38,15 +38,22 @@ size = Vector2(47.60105, 140.06277)
 [node name="Sword" type="CharacterBody2D" unique_id=726211451]
 rotation = -1.288053
 scale = Vector2(0.5, 0.5)
+collision_layer = 2
 script = ExtResource("1_e4ynd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1285362283]
-position = Vector2(135.47241, 502.14264)
+position = Vector2(122.028305, 506.04852)
 sprite_frames = SubResource("SpriteFrames_rx5id")
 animation = &"attack"
-frame_progress = 0.46946383
+frame = 2
+frame_progress = 1.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=993845782]
-position = Vector2(168.1993, 571.77704)
+[node name="Area2D" type="Area2D" parent="." unique_id=223270499]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=993845782]
+position = Vector2(168.19931, 571.77704)
 rotation = -0.48345622
 shape = SubResource("RectangleShape2D_v4ynp")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

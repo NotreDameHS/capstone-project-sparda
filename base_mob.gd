@@ -9,6 +9,21 @@ func damage(amount: float) -> void:
 			queue_free() 
 		HP.value = health
 
+func set_health(new_health: int) -> void:
+	health = new_health
+	HP.value = health
+
+
+func take_damage(amount) -> void:
+	health -= amount
+	set_health(health)
+	
+	if health <= 0:
+		die()
+		
+func die():
+	queue_free()
+
 # Called when  the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
