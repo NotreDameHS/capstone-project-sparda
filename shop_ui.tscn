@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bfn8ueep866eq"]
+
+[ext_resource type="Script" uid="uid://bfwdekni12osd" path="res://health_pack.gd" id="1_l4r40"]
+[ext_resource type="Script" uid="uid://dhn43hq8ob003" path="res://damage_boost.gd" id="2_dxujh"]
+
+[node name="ShopUI" type="CanvasLayer" unique_id=433529845]
+
+[node name="Panel" type="Panel" parent="." unique_id=828499813]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HealthPack" type="Button" parent="Panel" unique_id=2011626221]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_l4r40")
+
+[node name="DamageBoost" type="Button" parent="Panel" unique_id=1971653190]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("2_dxujh")
