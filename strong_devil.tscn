@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bwttnbpkke3ms"]
+
+[ext_resource type="PackedScene" uid="uid://c1twr2i6iwxt8" path="res://devil.tscn" id="1_6ab41"]
+
+[node name="Strong Devil" unique_id=341720140 instance=ExtResource("1_6ab41")]
+scale = Vector2(1.5, 1.5)
+health = 200.0
+damage_reduction = 2.0

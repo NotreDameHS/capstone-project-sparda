@@ -1,15 +1,16 @@
 class_name Devil extends Area2D
 
-var health := 100.0
-var max_health := 100.0
+@export var health := 100.0
+@export var damage_reduction := 1.00
 @onready var hp_bar := $Health/ProgressBar
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	set_health(max_health)
+	set_health(health)
 
 func take_damage(amount) -> void:
-	health -= amount
+	var true_damage = amount/damage_reduction
+	health -= true_damage
 	set_health(health)
 	
 	if health <= 0:

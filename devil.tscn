@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cgu71xll4wv5m" path="res://devil.gd" id="1_nugmr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nugmr"]
-radius = 48.04165
+radius = 53.872463
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nugmr"]
 bg_color = Color(0, 0, 0, 1)
@@ -21,7 +21,7 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [node name="Devil" type="Area2D" unique_id=341720140]
-position = Vector2(235, 100)
+position = Vector2(234, 100)
 script = ExtResource("1_nugmr")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1034498919]
