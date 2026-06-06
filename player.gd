@@ -35,5 +35,16 @@ func set_health(new_health: int) -> void:
 	health = new_health
 	health_bar.value = health
 		
+func take_damage(amount: float) -> void:
+	health -= amount
+	set_health(health)
+	print("Vergil took damage!")
+	
+	if health <= 0:
+		die()
+		
+func die() -> void:
+	print("You have died....")
+	queue_free()
 		
 		
