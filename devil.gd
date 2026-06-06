@@ -4,8 +4,8 @@ class_name Devil extends Area2D
 @export var speed := 100.0
 @export var damage_reduction := 1.00
 @onready var hp_bar := $Health/ProgressBar
-@onready var player = $CharacterBody2D
 
+var target_player: CharacterBody2D = null
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	set_health(health)
@@ -22,10 +22,10 @@ func die():
 	queue_free()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-	#var direction: Vector2 = global_position.direction_to(player.global_position)
-	#global_position += direction * speed * delta
-	
+func _process(delta: float) -> void:
+	if target_player != null:
+		var direction: Vector2 = global_position.direction_to(target_player.global_position)
+		global_position += direction * speed * delta
 
 
 
@@ -36,7 +36,7 @@ func set_health(new_health: float) -> void:
 
 
 	
-
-
 func _on_area_entered(area: Area2D) -> void:
-	pass
+	if area.owner is Player:
+		print("Hello")
+		target_player = area.owner

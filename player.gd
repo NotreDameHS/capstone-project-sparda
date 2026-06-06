@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
 var default_speed = 100.0
 var current_speed = 100.0

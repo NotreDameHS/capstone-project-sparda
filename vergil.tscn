@@ -197,7 +197,9 @@ sprite_frames = SubResource("SpriteFrames_xjtym")
 animation = &"new_animation"
 frame_progress = 0.7512954
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2083790660]
+[node name="Area2D" type="Area2D" parent="." unique_id=733711716]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2083790660]
 position = Vector2(4, 7)
 shape = SubResource("CapsuleShape2D_j8seg")
 

@@ -9,12 +9,18 @@
 
 [node name="Devil" parent="." unique_id=341720140 instance=ExtResource("1_ia1lp")]
 position = Vector2(722, 290)
+health = 100.0
+speed = 100.0
+damage_reduction = 1.0
 
 [node name="Player" parent="." unique_id=2091233494 instance=ExtResource("2_sasra")]
 position = Vector2(294, 315)
 
 [node name="Weak Devil" parent="." unique_id=1768934631 instance=ExtResource("3_sasra")]
 position = Vector2(719, 410)
+speed = 100.0
+damage_reduction = 1.0
 
 [node name="Strong Devil" parent="." unique_id=1613926390 instance=ExtResource("4_coq8p")]
 position = Vector2(707, 137)
+speed = 100.0
