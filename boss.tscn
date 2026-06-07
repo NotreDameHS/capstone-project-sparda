@@ -1,37 +1,37 @@
 [gd_scene format=3 uid="uid://dctqkarewg0o0"]
 
-[ext_resource type="Texture2D" uid="uid://b0ohmckwcqqu6" path="res://bosslaugh-Photoroom.png" id="1_0bnu1"]
+[ext_resource type="Script" uid="uid://byk4efgfpiiys" path="res://boss.gd" id="1_0bnu1"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6xxrv"]
-atlas = ExtResource("1_0bnu1")
-region = Rect2(0, 0, 341, 288)
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6xxrv"]
+load_path = "res://.godot/imported/BossIdle.png-e787661e9c81c8adc2443b81d3181daf.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_skx2t"]
-atlas = ExtResource("1_0bnu1")
-region = Rect2(341, 0, 341, 288)
+atlas = SubResource("CompressedTexture2D_6xxrv")
+region = Rect2(0, 0, 341, 285)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lnbgr"]
-atlas = ExtResource("1_0bnu1")
-region = Rect2(682, 0, 341, 288)
+atlas = SubResource("CompressedTexture2D_6xxrv")
+region = Rect2(341, 0, 341, 285)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o1i15"]
-atlas = ExtResource("1_0bnu1")
-region = Rect2(0, 288, 341, 288)
+atlas = SubResource("CompressedTexture2D_6xxrv")
+region = Rect2(682, 0, 341, 285)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_we8h1"]
-atlas = ExtResource("1_0bnu1")
-region = Rect2(341, 288, 341, 288)
+atlas = SubResource("CompressedTexture2D_6xxrv")
+region = Rect2(0, 285, 341, 285)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kvofc"]
-atlas = ExtResource("1_0bnu1")
-region = Rect2(682, 288, 341, 288)
+atlas = SubResource("CompressedTexture2D_6xxrv")
+region = Rect2(341, 285, 341, 285)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ef0k6"]
+atlas = SubResource("CompressedTexture2D_6xxrv")
+region = Rect2(682, 285, 341, 285)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ef0k6"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6xxrv")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_skx2t")
 }, {
@@ -46,16 +46,29 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kvofc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ef0k6")
 }],
 "loop": true,
 "name": &"Boss Idle",
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_0bnu1"]
+radius = 171.7469
+
 [node name="Boss" type="CharacterBody2D" unique_id=291627579]
+script = ExtResource("1_0bnu1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=864213034]
 position = Vector2(171, 144)
 sprite_frames = SubResource("SpriteFrames_ef0k6")
 animation = &"Boss Idle"
-frame_progress = 0.38778353
+frame_progress = 0.118018396
+
+[node name="Area2D" type="Area2D" parent="." unique_id=411666652]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=568106862]
+position = Vector2(180, 134)
+shape = SubResource("CircleShape2D_0bnu1")
