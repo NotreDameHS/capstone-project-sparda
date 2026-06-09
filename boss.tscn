@@ -1,74 +1,53 @@
 [gd_scene format=3 uid="uid://dctqkarewg0o0"]
 
 [ext_resource type="Script" uid="uid://byk4efgfpiiys" path="res://boss.gd" id="1_0bnu1"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6xxrv"]
-load_path = "res://.godot/imported/BossIdle.png-e787661e9c81c8adc2443b81d3181daf.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_skx2t"]
-atlas = SubResource("CompressedTexture2D_6xxrv")
-region = Rect2(0, 0, 341, 285)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lnbgr"]
-atlas = SubResource("CompressedTexture2D_6xxrv")
-region = Rect2(341, 0, 341, 285)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o1i15"]
-atlas = SubResource("CompressedTexture2D_6xxrv")
-region = Rect2(682, 0, 341, 285)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_we8h1"]
-atlas = SubResource("CompressedTexture2D_6xxrv")
-region = Rect2(0, 285, 341, 285)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kvofc"]
-atlas = SubResource("CompressedTexture2D_6xxrv")
-region = Rect2(341, 285, 341, 285)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ef0k6"]
-atlas = SubResource("CompressedTexture2D_6xxrv")
-region = Rect2(682, 285, 341, 285)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ef0k6"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_skx2t")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lnbgr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o1i15")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_we8h1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kvofc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ef0k6")
-}],
-"loop": true,
-"name": &"Boss Idle",
-"speed": 5.0
-}]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_6xxrv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0bnu1"]
-radius = 171.7469
+radius = 197.49684
 
-[node name="Boss" type="CharacterBody2D" unique_id=291627579]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_skx2t"]
+bg_color = Color(0.40800217, 0.75874734, 0.2883947, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lnbgr"]
+bg_color = Color(0.5564308, 0.99458236, 0.492988, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Boss" type="Area2D" unique_id=1243754284]
 script = ExtResource("1_0bnu1")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=864213034]
-position = Vector2(171, 144)
-sprite_frames = SubResource("SpriteFrames_ef0k6")
-animation = &"Boss Idle"
-frame_progress = 0.118018396
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1524862784]
+position = Vector2(186, 134)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_6xxrv")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=411666652]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=568106862]
-position = Vector2(180, 134)
+position = Vector2(195, 126)
 shape = SubResource("CircleShape2D_0bnu1")
+
+[node name="Control" type="Control" parent="." unique_id=852319398]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ProgressBar" type="ProgressBar" parent="Control" unique_id=1238369475]
+layout_mode = 0
+offset_left = 71.0
+offset_top = -25.0
+offset_right = 307.0
+offset_bottom = 2.0
+theme_override_styles/background = SubResource("StyleBoxFlat_skx2t")
+theme_override_styles/fill = SubResource("StyleBoxFlat_lnbgr")
+max_value = 10000.0
+value = 10000.0
+show_percentage = false

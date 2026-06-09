@@ -2,7 +2,7 @@ class_name Player extends CharacterBody2D
 
 var default_speed = 100.0
 var current_speed = 100.0
-var sprint_speed = 200.0
+var sprint_speed = 400.0
 var health := 100.0
 @onready var health_bar := $Health/ProgressBar
 
