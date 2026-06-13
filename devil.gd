@@ -12,6 +12,7 @@ var target_player: CharacterBody2D = null
 var attack_time := 0.0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	hp_bar.max_value = health
 	set_health(health)
 
 func take_damage(amount) -> void:

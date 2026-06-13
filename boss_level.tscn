@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b3bo7jb8njc23" path="res://boss_follow.gd" id="1_p7d8j"]
 [ext_resource type="PackedScene" uid="uid://dctqkarewg0o0" path="res://boss.tscn" id="2_8bepo"]
-[ext_resource type="PackedScene" uid="uid://bw8b5je6rr1yc" path="res://vergil.tscn" id="3_8bepo"]
+[ext_resource type="PackedScene" uid="uid://bw8b5je6rr1yc" path="res://entities/player/vergil.tscn" id="3_8bepo"]
 
 [sub_resource type="Curve2D" id="Curve2D_1nchv"]
 _data = {

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bfn8ueep866eq"]
 
-[ext_resource type="Script" uid="uid://bfwdekni12osd" path="res://health_pack.gd" id="1_l4r40"]
+[ext_resource type="Script" uid="uid://bfwdekni12osd" path="res://entities/collectibles/health_pack.gd" id="1_l4r40"]
 [ext_resource type="Script" uid="uid://dhn43hq8ob003" path="res://damage_boost.gd" id="2_dxujh"]
 
 [node name="ShopUI" type="CanvasLayer" unique_id=433529845]

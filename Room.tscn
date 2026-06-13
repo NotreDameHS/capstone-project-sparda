@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://cmkgvo7ad1e3w" path="res://roguelikeChar_transparent.png" id="1_5ruuo"]
 [ext_resource type="Texture2D" uid="uid://crsr3o1h4bstw" path="res://tilemap.png" id="2_u3qo1"]
-[ext_resource type="PackedScene" uid="uid://bw8b5je6rr1yc" path="res://vergil.tscn" id="3_u3qo1"]
-[ext_resource type="PackedScene" uid="uid://bwttnbpkke3ms" path="res://strong_devil.tscn" id="4_1loai"]
-[ext_resource type="PackedScene" uid="uid://c1twr2i6iwxt8" path="res://devil.tscn" id="5_hgg63"]
+[ext_resource type="PackedScene" uid="uid://bw8b5je6rr1yc" path="res://entities/player/vergil.tscn" id="3_u3qo1"]
+[ext_resource type="PackedScene" uid="uid://bwttnbpkke3ms" path="res://entities/Devils/strong_devil.tscn" id="4_1loai"]
+[ext_resource type="PackedScene" uid="uid://c1twr2i6iwxt8" path="res://entities/Devils/devil.tscn" id="5_hgg63"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_61bxy"]
 texture = ExtResource("1_5ruuo")
@@ -160,7 +160,6 @@ position = Vector2(32, 208)
 
 [node name="Strong Devil" parent="." unique_id=341720140 instance=ExtResource("4_1loai")]
 position = Vector2(512, 228)
-speed = null
 
 [node name="Devil" parent="." unique_id=781534637 instance=ExtResource("5_hgg63")]
 position = Vector2(516, 84)
