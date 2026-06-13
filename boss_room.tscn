@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dyy7fkk2kri38"]
+
+[ext_resource type="PackedScene" uid="uid://bw8b5je6rr1yc" path="res://vergil.tscn" id="1_any6y"]
+[ext_resource type="PackedScene" uid="uid://dctqkarewg0o0" path="res://boss.tscn" id="2_n8ie0"]
+
+[node name="Boss Room" type="Node2D" unique_id=244639122]
+
+[node name="Player" parent="." unique_id=2091233494 instance=ExtResource("1_any6y")]
+
+[node name="Boss" parent="." unique_id=1243754284 instance=ExtResource("2_n8ie0")]
+position = Vector2(824, 104)
