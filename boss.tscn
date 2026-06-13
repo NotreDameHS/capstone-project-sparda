@@ -42,14 +42,14 @@ script = ExtResource("3_skx2t")
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_6xxrv")
 
-[node name="Control" type="Control" parent="Path2D/PathFollow2D" unique_id=852319398]
+[node name="Health" type="Control" parent="Path2D/PathFollow2D" unique_id=852319398]
 layout_mode = 3
 anchors_preset = 0
 offset_top = -64.0
 offset_right = 40.0
 offset_bottom = -24.0
 
-[node name="ProgressBar" type="ProgressBar" parent="Path2D/PathFollow2D/Control" unique_id=1238369475]
+[node name="ProgressBar" type="ProgressBar" parent="Path2D/PathFollow2D/Health" unique_id=1238369475]
 layout_mode = 0
 offset_left = -112.0
 offset_top = -72.0

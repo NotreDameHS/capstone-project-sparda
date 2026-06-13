@@ -188,6 +188,7 @@ corner_radius_bottom_left = 4
 
 [node name="Player" type="CharacterBody2D" unique_id=2091233494]
 position = Vector2(113, 83)
+scale = Vector2(0.5, 0.5)
 script = ExtResource("2_j8seg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=156441353]
