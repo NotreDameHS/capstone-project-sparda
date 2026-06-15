@@ -6,6 +6,7 @@ class_name Devil extends Area2D
 @export var attack_damage := 10.0
 @onready var hp_bar := $Health/ProgressBar
 @export var attack_cooldown := 1.0
+@export var money = 50
 
 
 var target_player: CharacterBody2D = null
@@ -24,6 +25,7 @@ func take_damage(amount) -> void:
 		die()
 		
 func die():
+	GameManager.add_money(money)
 	queue_free()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

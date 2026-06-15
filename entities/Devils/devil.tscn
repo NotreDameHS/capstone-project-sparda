@@ -22,7 +22,7 @@ corner_radius_bottom_left = 8
 
 [node name="Devil" type="Area2D" unique_id=781534637]
 position = Vector2(1022, 100)
-scale = Vector2(0.7, 0.7)
+scale = Vector2(1.1, 1.1)
 script = ExtResource("1_nugmr")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1034498919]
