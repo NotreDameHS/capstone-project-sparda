@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://djf7keuxeyyoh"]
 
 [ext_resource type="Script" uid="uid://c1nilbeq3xlfj" path="res://money_label.gd" id="1_fyqef"]
+[ext_resource type="Script" uid="uid://dn5re6e2fi16t" path="res://pause_menu.gd" id="2_m6e0p"]
 
 [node name="UI" type="CanvasLayer" unique_id=1444771645]
 
@@ -18,3 +19,46 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Money : 0"
 script = ExtResource("1_fyqef")
+
+[node name="PauseMenu" type="ColorRect" parent="." unique_id=1897902476]
+process_mode = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.27314222, 0.27314225, 0.27314216, 1)
+script = ExtResource("2_m6e0p")
+
+[node name="CenterContainer" type="CenterContainer" parent="PauseMenu" unique_id=1580280967]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/CenterContainer" unique_id=1171717659]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PauseMenu/CenterContainer/VBoxContainer" unique_id=1792688024]
+layout_mode = 2
+
+[node name="ResumeButton" type="Button" parent="PauseMenu/CenterContainer/VBoxContainer" unique_id=766961555]
+layout_mode = 2
+text = "RESUME
+"
+
+[node name="PauseGameMargin" type="MarginContainer" parent="." unique_id=1654467377]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -59.0
+offset_bottom = 45.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+
+[node name="Button" type="Button" parent="PauseGameMargin" unique_id=802961975]
+layout_mode = 2
+text = "PAUSE"
+
+[connection signal="pressed" from="PauseMenu/CenterContainer/VBoxContainer/ResumeButton" to="PauseMenu" method="_on_resume_button_pressed"]
+[connection signal="pressed" from="PauseGameMargin/Button" to="PauseMenu" method="_on_button_pressed"]
