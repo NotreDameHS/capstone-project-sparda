@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 	pass
 func update_shop_labels():
 	$CenterContainer/VBoxContainer/HealthButton.text = "+20 Max HP (Cost: " + str(GameManager.health_upgrade_cost) + ")"
-	$CenterContainer/VBoxContainer/DamageButton.text = "+5 Damage (Cost: " + str(GameManager.damage_upgrade_cost) + ")"
+	$CenterContainer/VBoxContainer/DamageButton.text = "+10 Damage (Cost: " + str(GameManager.damage_upgrade_cost) + ")"
 		
 func pause_game():
 	show()

@@ -45,6 +45,9 @@ func take_damage(amount: float) -> void:
 		
 func die() -> void:
 	print("You have died....")
+	var death_screen = get_tree().get_first_node_in_group("DeathScreen")
+	if death_screen != null:
+		death_screen.show_death_screen
 	queue_free()
 
 func apply_health_upgrade():
