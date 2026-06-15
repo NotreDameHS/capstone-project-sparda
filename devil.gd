@@ -61,5 +61,4 @@ func set_health(new_health: float) -> void:
 	
 func _on_area_entered(area: Area2D) -> void:
 	if area.owner is Player:
-		print("Hello")
 		target_player = area.owner

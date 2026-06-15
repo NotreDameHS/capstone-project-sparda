@@ -46,6 +46,19 @@ layout_mode = 2
 text = "RESUME
 "
 
+[node name="HSeparator" type="HSeparator" parent="PauseMenu/CenterContainer/VBoxContainer" unique_id=1468170152]
+layout_mode = 2
+
+[node name="Shop Label" type="Label" parent="PauseMenu/CenterContainer/VBoxContainer" unique_id=1145551525]
+layout_mode = 2
+text = "--- SHOP ---"
+
+[node name="HealthButton" type="Button" parent="PauseMenu/CenterContainer/VBoxContainer" unique_id=298092795]
+layout_mode = 2
+
+[node name="DamageButton" type="Button" parent="PauseMenu/CenterContainer/VBoxContainer" unique_id=831021061]
+layout_mode = 2
+
 [node name="PauseGameMargin" type="MarginContainer" parent="." unique_id=1654467377]
 anchors_preset = 1
 anchor_left = 1.0
@@ -61,4 +74,6 @@ layout_mode = 2
 text = "PAUSE"
 
 [connection signal="pressed" from="PauseMenu/CenterContainer/VBoxContainer/ResumeButton" to="PauseMenu" method="_on_resume_button_pressed"]
+[connection signal="pressed" from="PauseMenu/CenterContainer/VBoxContainer/HealthButton" to="PauseMenu" method="_on_health_button_pressed"]
+[connection signal="pressed" from="PauseMenu/CenterContainer/VBoxContainer/DamageButton" to="PauseMenu" method="_on_damage_button_pressed"]
 [connection signal="pressed" from="PauseGameMargin/Button" to="PauseMenu" method="_on_button_pressed"]

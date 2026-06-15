@@ -186,7 +186,7 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[node name="Player" type="CharacterBody2D" unique_id=2091233494]
+[node name="Player" type="CharacterBody2D" unique_id=2091233494 groups=["Player"]]
 position = Vector2(113, 83)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("2_j8seg")

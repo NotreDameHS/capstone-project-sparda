@@ -1,15 +1,15 @@
 class_name Player extends CharacterBody2D
-
+var health := 100.0
 var default_speed = 100.0
 var current_speed = 100.0
 var sprint_speed = 400.0
-var health := 100.0
 @onready var health_bar := $Health/ProgressBar
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	set_health(100)
+	health_bar.max_value = GameManager.max_health
+	set_health(GameManager.max_health)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -46,5 +46,9 @@ func take_damage(amount: float) -> void:
 func die() -> void:
 	print("You have died....")
 	queue_free()
+
+func apply_health_upgrade():
+	health_bar.max_value = GameManager.max_health
+	set_health(GameManager.max_health)
 		
 		
