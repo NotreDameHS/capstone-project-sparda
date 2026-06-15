@@ -28,6 +28,8 @@ wait_time = 40.0
 [node name="UI" parent="." unique_id=1444771645 instance=ExtResource("6_4mnpp")]
 visible = false
 
+[node name="UI2" parent="." unique_id=26520232 instance=ExtResource("6_4mnpp")]
+
 [node name="MapWalls" type="StaticBody2D" parent="." unique_id=509644727]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MapWalls" unique_id=998340261]

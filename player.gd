@@ -13,7 +13,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	var direction := Vector2(0, 0)
 	direction.x = Input.get_axis("move_left", "move_right")
 	direction.y = Input.get_axis("move_up", "move_down")
@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 		direction = direction.normalized()
 	
 	velocity = direction * current_speed
-	position += velocity * delta
+	move_and_slide()
 	
 	if Input.is_action_pressed("sprint"):
 		current_speed = sprint_speed
@@ -49,8 +49,10 @@ func die() -> void:
 	print("You have died....")
 	var death_screen = get_tree().get_first_node_in_group("DeathScreen")
 	if death_screen != null:
-		death_screen.show_death_screen
-	queue_free()
+		death_screen.show_death_screen()
+		hide()
+	else:
+		queue_free()
 
 func apply_health_upgrade():
 	health_bar.max_value = GameManager.max_health
