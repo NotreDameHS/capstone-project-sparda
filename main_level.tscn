@@ -23,7 +23,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAABAAAAAQAAAAAAAAACAAAAAQAAAAA
 wait_time = 3.5
 
 [node name="WaveTimer" type="Timer" parent="." unique_id=2103496319]
-wait_time = 25.0
+wait_time = 40.0
 
 [node name="UI" parent="." unique_id=1444771645 instance=ExtResource("6_4mnpp")]
 visible = false
@@ -47,6 +47,9 @@ shape = SubResource("RectangleShape2D_4mnpp")
 position = Vector2(-8, 382)
 rotation = -1.5707964
 shape = SubResource("RectangleShape2D_4mnpp")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1768119911]
+position = Vector2(566, 329)
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="WaveTimer" to="." method="_on_wave_timer_timeout"]

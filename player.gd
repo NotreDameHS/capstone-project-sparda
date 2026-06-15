@@ -31,6 +31,8 @@ func _process(delta: float) -> void:
 		current_speed = default_speed
 		$AnimatedSprite2D.play("walking")
 	
+	
+	
 func set_health(new_health: int) -> void:
 	health = new_health
 	health_bar.value = health
